@@ -36,6 +36,11 @@ scrape_configs:
     static_configs:
       - targets: ["ping-exporter:9427"]
 
+  - job_name: 'connectbox'
+    static_configs:
+      - targets:
+        - my-homeserver-metrics-stack_connectbox-exporter_1:9705
+
   - job_name: "integrations/node_exporter"
     static_configs:
      - targets:
